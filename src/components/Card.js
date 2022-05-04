@@ -17,7 +17,7 @@ class Card extends React.Component {
                     <p className="element__title">{this.props.data.name}</p>
                     <div className="element__like">
                         <button className="like__button" type="button"></button>
-                        <p className="like__counter"></p>
+                        <p className="like__counter">{this.props.data.likes.length}</p>
                     </div>
                 </div>
                 <button className="element__delete" type="button"></button>

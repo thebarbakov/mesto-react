@@ -12,7 +12,10 @@ class PopupWithForm extends React.Component {
                     <h2 className="popup__title">{this.props.title}</h2>
                     
                     <form className="popup__form" name={this.props.name} noValidate>
+                        <fieldset className="popup__set">
                             {this.props.children}
+                            <button type="submit" className="popup__button-save">Сохранить</button>
+                        </fieldset> 
                     </form>
                 </div>
                 <div className="popup__overlay" onClick={this.props.onClose}></div>

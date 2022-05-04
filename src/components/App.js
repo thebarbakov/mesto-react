@@ -14,7 +14,7 @@ class App extends React.Component {
             isEditProfilePopupOpen: false,
             isAddPlacePopupOpen: false,
             isEditAvatarPopupOpen: false,
-            selectedCard: false
+            selectedCard: null
         }
     }
 
@@ -40,7 +40,7 @@ class App extends React.Component {
             isEditProfilePopupOpen: false,
             isAddPlacePopupOpen: false,
             isEditAvatarPopupOpen: false,
-            selectedCard: false
+            selectedCard: null
         })
     }
 
@@ -62,76 +62,49 @@ class App extends React.Component {
                 <PopupWithForm name="profile-avatar"
                 title="Обновить аватар"
                 isOpen={this.state.isEditAvatarPopupOpen}
-                onClose={this.closeAllPopups}
-                children={
-                    <fieldset className="popup__set">
-                        <label className="popup__field">
-                            <input type="url" className="popup__input" id="profile-avatar-input" name="avatarLink" 
-                            placeholder="URL" required/>
-                            <span className="popup__input-error profile-avatar-input-error"></span>
-                        </label>
-                        <button type="submit" className="popup__button-save">Сохранить</button>
-                     </fieldset> 
-                }
-                />
+                onClose={this.closeAllPopups}>
+                    <label className="popup__field">
+                        <input type="url" className="popup__input" id="profile-avatar-input" name="avatarLink" 
+                        placeholder="URL" required/>
+                        <span className="popup__input-error profile-avatar-input-error"></span>
+                    </label>
+                </PopupWithForm>
                 <PopupWithForm 
                 name="profile"
                 title="Редактировать профиль"
                 isOpen={this.state.isEditProfilePopupOpen}
-                onClose={this.closeAllPopups}
-                children={
-                    <>
-                        <fieldset className="popup__set">
-                            <label className="popup__field">
-                                <input type="text" className="popup__input" id="profile-name-input" name="profileName" 
-                                placeholder="Имя" required minLength="2" maxLength="40"/>
-                                <span className="popup__input-error profile-name-input-error"></span>
-                            </label>
-                            <label className="popup__field">
-                                <input type="text" className="popup__input" id="profile-job-input" name="profileJob" 
-                                placeholder="Работа" required minLength="2" maxLength="200"/>
-                                <span className="popup__input-error profile-job-input-error"></span>
-                            </label>
-                            <button type="submit" className="popup__button-save">Сохранить</button>
-                        </fieldset> 
-                    </>
-                }
-                />
+                onClose={this.closeAllPopups}>
+                    <label className="popup__field">
+                        <input type="text" className="popup__input" id="profile-name-input" name="profileName" 
+                        placeholder="Имя" required minLength="2" maxLength="40"/>
+                        <span className="popup__input-error profile-name-input-error"></span>
+                    </label>
+                    <label className="popup__field">
+                        <input type="text" className="popup__input" id="profile-job-input" name="profileJob" 
+                        placeholder="Работа" required minLength="2" maxLength="200"/>
+                        <span className="popup__input-error profile-job-input-error"></span>
+                    </label>
+                </PopupWithForm>
                 <PopupWithForm 
                 name="new-card"
                 title="Новое место"
                 isOpen={this.state.isAddPlacePopupOpen}
-                onClose={this.closeAllPopups}
-                children={
-                    <>
-                        <fieldset className="popup__set">
-                            <label className="popup__field">
-                                <input type="text" className="popup__input" id="card-name-input" name="cardName" 
-                            placeholder="Название" required minLength="2" maxLength="30"/>
-                                <span className="popup__input-error card-name-input-error"></span>
-                            </label>
-                            <label className="popup__field">
-                                <input type="url" className="popup__input" id="card-link-input" name="cardLink" 
-                                placeholder="Ссылка на картинку" required/>
-                                <span className="popup__input-error card-link-input-error"></span>
-                            </label>
-                            <button type="submit" className="popup__button-save">Сохранить</button>
-                        </fieldset> 
-                    </>
-                }
-                />
-                 <PopupWithForm 
+                onClose={this.closeAllPopups}>
+                    <label className="popup__field">
+                        <input type="text" className="popup__input" id="card-name-input" name="cardName" 
+                    placeholder="Название" required minLength="2" maxLength="30"/>
+                        <span className="popup__input-error card-name-input-error"></span>
+                    </label>
+                    <label className="popup__field">
+                        <input type="url" className="popup__input" id="card-link-input" name="cardLink" 
+                        placeholder="Ссылка на картинку" required/>
+                        <span className="popup__input-error card-link-input-error"></span>
+                    </label>
+                </PopupWithForm>
+                <PopupWithForm 
                 name="new-card"
                 title="Вы уверены?"
-                onClose={this.closeAllPopups}
-                children={
-                    <>
-                    <fieldset className="popup__set">
-                        <button type="submit" className="popup__button-save">Да</button>
-                    </fieldset>  
-                    </>
-                }
-                />
+                onClose={this.closeAllPopups}/>
             </>
   )};
 }
