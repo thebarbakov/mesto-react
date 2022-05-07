@@ -42,3 +42,4 @@
 @import url(./blocks/popup/__input/_error/popup__input_error.css);
 @import url(./blocks/profile/__photo-overllay/profile__overllay.css);
 @import url(./blocks/profile/__photo/profile__photo.css);
+@import url(./blocks/element/__delete/_hidden/element__delete_hidden.css);
