@@ -4,7 +4,7 @@
 
 ![Скриншот](./screenshot.jpg)
 
-[Ссылка на проект](https://thebarbakov.github.io/mesto/)
+[Ссылка на проект](mestoreact.netlify.app)
 
 ------------------
 
