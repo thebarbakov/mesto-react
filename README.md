@@ -2,7 +2,7 @@
 
 ------------------
 
-![Screenshot of page](./images/mesto.png)
+![Скриншот](./screenshot.jpg)
 
 [Ссылка на проект](https://thebarbakov.github.io/mesto/)
 

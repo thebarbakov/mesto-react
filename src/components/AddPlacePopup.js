@@ -1,6 +1,5 @@
 import React from "react";
 import PopupWithForm from "./PopupWithForm.js";
-import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 
 class AddPlacePopup extends React.Component {
   constructor(props) {
